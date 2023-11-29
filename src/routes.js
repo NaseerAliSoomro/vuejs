@@ -1,35 +1,41 @@
-import HomePage from './components/Home.vue';
-import SignUp from './components/SignUp.vue';
-import SignIn from './components/SignIn.vue';
-import HeaderComponent from './components/Header.vue';
-import {createRouter, createWebHistory} from 'vue-router';
+import HomePage from "./components/Home.vue";
+import SignUp from "./components/SignUp.vue";
+import SignIn from "./components/SignIn.vue";
+import AddRestaurant from "./components/AddRestaurant.vue";
+import UpdateRestaurant from "./components/UpdateRestaurant.vue";
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
-    {
-        name : "HomePage",
-        component : HomePage,
-        path : '/',
-    },
-    {
-        name : "SignUp",
-        component : SignUp,
-        path : '/sign-up',
-    },
-    {
-        name : "SignIn",
-        component : SignIn,
-        path : '/sign-in',
-    },
-    {
-        name : "HeaderComponent",
-        component : HeaderComponent,
-        path : '/header',
-    },
+  {
+    name: "HomePage",
+    component: HomePage,
+    path: "/",
+  },
+  {
+    name: "SignUp",
+    component: SignUp,
+    path: "/sign-up",
+  },
+  {
+    name: "SignIn",
+    component: SignIn,
+    path: "/sign-in",
+  },
+  {
+    name: "AddRestaurant",
+    component: AddRestaurant,
+    path: "/add-restaurant",
+  },
+  {
+    name: "UpdateRestaurant",
+    component: UpdateRestaurant,
+    path: "/update-restaurant",
+  },
 ];
 
 const router = createRouter({
-    history : createWebHistory(),
-    routes
+  history: createWebHistory(),
+  routes,
 });
 
-export default router
+export default router;

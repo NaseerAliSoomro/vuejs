@@ -58,7 +58,7 @@ export default {
     async signIn() {
       try {
         const response = await axios.get(
-            `http://localhost:3000/users?email=${this.email}&password=${this.password}`
+          `http://localhost:3000/users?email=${this.email}&password=${this.password}`
         );
 
         console.log(response.data.length);
@@ -72,11 +72,10 @@ export default {
       }
     },
   },
-  mounted()
-  {
-    if(localStorage.getItem("userInfo")){
+  mounted() {
+    if (localStorage.getItem("userInfo")) {
       this.$router.push({ name: "HomePage" });
     }
-  }
+  },
 };
 </script>

@@ -19,19 +19,14 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <!-- <a class="nav-link" href="#">Add Restaurant</a> -->
+            <router-link to="/add-restaurant"> Add Restaurant </router-link>
+        </li>
+        <li class="nav-item">
+            <router-link to="/update-restaurant"> Update Restaurant </router-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" v-on:click="logout">Logout</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
           </li>
         </ul>
       </div>
@@ -45,7 +40,6 @@ export default {
   methods:{
     logout()
     {
-        alert('logout');
         localStorage.clear();
         this.$router.push({ name: "SignIn" });
     }
