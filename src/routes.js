@@ -29,7 +29,12 @@ const routes = [
   {
     name: "UpdateRestaurant",
     component: UpdateRestaurant,
-    path: "/update-restaurant",
+    path: "/update-restaurant/:id",
+  },
+  {
+    name: "DeleteRestaurant",
+    // component: UpdateRestaurant,
+    path: "/delete-restaurant/:id",
   },
 ];
 

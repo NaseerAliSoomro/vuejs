@@ -21,9 +21,6 @@
           <li class="nav-item">
             <!-- <a class="nav-link" href="#">Add Restaurant</a> -->
             <router-link to="/add-restaurant"> Add Restaurant </router-link>
-        </li>
-        <li class="nav-item">
-            <router-link to="/update-restaurant"> Update Restaurant </router-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" v-on:click="logout">Logout</a>
@@ -35,14 +32,13 @@
 </template>
 
 <script>
-export default {
-  name: "HeaderComponent",
-  methods:{
-    logout()
-    {
-        localStorage.clear();
-        this.$router.push({ name: "SignIn" });
-    }
-  }
-};
+    export default {
+        name: "HeaderComponent",
+        methods: {
+            logout() {
+            localStorage.clear();
+            this.$router.push({ name: "SignIn" });
+            },
+        },
+    };
 </script>
